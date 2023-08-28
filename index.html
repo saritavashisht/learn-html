@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            font-size: 14px;
+        }
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer'
+        }
+
+        /* .container:hover .box:not(:hover){
+            opacity: .5;
+        } */
+
+        .box:nth-child(1){
+            border-radius: 40px 0 40px 40px;
+        }
+
+        .box {
+            background-color: bisque;
+            border: 3px solid black;
+            padding:12px 23px;
+            font-size: 1.5rem;
+        }
+        .box:hover {
+            color: red;
+            background: url('./hero-min.jpg') no-repeat center;
+            background-size: cover; 
+        }
+
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+        footer{
+            grid-area:footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar " class="box">
+            Home About Contact us 
+        </div>
+        <div id="section " class="box">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero alias laborum praesentium porro repellat eos dolorem laudantium iusto tempore dignissimos assumenda modi iste sed explicabo esse inventore facere error ipsa, omnis voluptates. Est amet architecto eum aliquam sapiente corrupti voluptatem, nam inventore distinctio at voluptatibus quia nihil. Saepe debitis inventore corporis quaerat at nesciunt a culpa odio ea sit aliquam vel voluptatem, minus dolor. Repellat, velit labore. Odio dolores architecto at dicta accusamus ipsam necessitatibus repellat amet, repellendus impedit, officiis officia omnis sit, autem quas. Ab molestiae, rem eligendi tempora officia iure hic nemo! Voluptatem blanditiis accusantium quasi rerum reiciendis.
+        </div>
+        <div id="aside " class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores perspiciatis aspernatur odio, vitae amet, dolorem laudantium fugiat possimus eaque, aliquam sunt eius expedita doloremque quaerat similique rem eveniet quae eligendi. A corporis ullam modi impedit est et voluptas repellat facere possimus distinctio. Sapiente ad similique voluptatem voluptas repudiandae harum nesciunt dolorum commodi dicta modi. Dolor expedita, at reprehenderit et dignissimos alias. Alias ab neque nostrum adipisci fuga minus sint exercitationem enim ducimus modi, hic commodi, facere voluptate corrupti harum sed tenetur aut odio quaerat est voluptates? Perspiciatis consequatur alias fugiat possimus, doloremque nam, eum optio dolore, autem ullam labore?
+        </div>
+        <!-- <div class="box">item-4</div>
+        <div class="box">item-5</div>
+        <div class="box">item-6</div>
+        <div class="box">item-7</div>
+        <div class="box">item-8</div>
+        <div class="box">item-9</div>
+        <div class="box">item-10</div>
+        <div class="box">item-11</div>
+        <div class="box">item-12</div> -->
+    </div>
+    <footer class="box"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor rem omnis!</footer>
+</body>
+
+</html>
